@@ -2,9 +2,6 @@
 = @blog.text
 = link_to '一覧ページ', blogs_path
 
-= form_with(model: @blog, local: true) do |f|
-  = f.text_field :title
-  = f.text_area :text
-  = f.submit "SEND"
-  
+
+= link_to '編集する', edit_blog_path(@blog), method: :get
 = link_to '削除する', blog_path(@blog), method: :delete

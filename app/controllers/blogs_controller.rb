@@ -21,6 +21,10 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
   def update
     @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
