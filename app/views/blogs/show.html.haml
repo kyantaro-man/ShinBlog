@@ -1,3 +1,8 @@
 = @blog.title
 = @blog.text
 = link_to '一覧ページ', blogs_path
+
+= form_with(model: @blog, local: true) do |f|
+  = f.text_field :title
+  = f.text_area :text
+  = f.submit "SEND"
