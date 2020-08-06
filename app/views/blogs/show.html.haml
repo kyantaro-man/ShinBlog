@@ -1,0 +1,9 @@
+%h2 詳細表示ページ
+
+= @blog.title
+= @blog.text
+= link_to '一覧ページ', blogs_path
+
+
+= link_to '編集する', edit_blog_path(@blog), method: :get
+= link_to '削除する', blog_path(@blog), method: :delete

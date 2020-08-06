@@ -1,0 +1,6 @@
+%h2 新規作成ページ
+
+= form_with model: @blog do |f|
+  = f.text_field :title
+  = f.text_area :text
+  = f.submit "SEND"

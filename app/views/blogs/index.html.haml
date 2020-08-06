@@ -1,0 +1,8 @@
+%h2 一覧表示ページ
+
+= link_to "新規作成ページ", new_blog_path
+
+- @blogs.each do |blog|
+  = blog.title
+  = blog.text
+  = link_to '詳細ページ', blog_path(blog.id)
