@@ -2,6 +2,8 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+
+    @blogs = @blogs.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def new

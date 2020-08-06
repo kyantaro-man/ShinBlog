@@ -1,5 +1,11 @@
 %h2 一覧表示ページ
 
+%h3 タイトル検索
+= form_with url: blogs_path, method: :get, local: true do |f|
+  = f.text_field :search
+  = f.submit 'Search', name: nil
+  = link_to "検索終了", blogs_path
+
 = link_to "新規作成ページ", new_blog_path
 
 - @blogs.each do |blog|
