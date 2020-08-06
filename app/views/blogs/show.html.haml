@@ -6,3 +6,5 @@
   = f.text_field :title
   = f.text_area :text
   = f.submit "SEND"
+  
+= link_to '削除する', blog_path(@blog), method: :delete
